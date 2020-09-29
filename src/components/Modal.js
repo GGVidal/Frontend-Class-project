@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Descriptions } from "antd";
+import { Modal } from "antd";
 
 const ModalComponent = ({
   visible,
