@@ -1,6 +1,5 @@
 import React from "react";
 import { Layout, Menu } from "antd";
-import { UserOutlined, VideoCameraOutlined } from "@ant-design/icons";
 const { Header, Sider } = Layout;
 
 const Sidebar = () => {

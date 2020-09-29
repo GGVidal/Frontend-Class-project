@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Layout, Row, Typography, Breadcrumb, Button, Card } from "antd";
+import { Col, Layout, Row, Typography, Breadcrumb, Button } from "antd";
 import Sidebar from "../components/Sidebar";
 import Searchbar from "../components/Searchbar";
 import Content from "../components/Content";
