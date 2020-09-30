@@ -4,6 +4,7 @@ import Sidebar from "../components/Sidebar";
 import Searchbar from "../components/Searchbar";
 import Content from "../components/Content";
 import CardList from "../components/CardList";
+import { Link } from "react-router-dom";
 const { Header, Footer } = Layout;
 const { Title } = Typography;
 
@@ -51,12 +52,14 @@ const Home = () => {
                 lg={{ order: 4 }}
                 offset={5}
               >
-                <Button //add hover style
-                  style={{ backgroundColor: "#f0f2f5", color: "#2897fd" }}
-                  type="primary"
-                >
-                  Adicionar nova turma
-                </Button>
+                <Link to="/addUser">
+                  <Button //add hover style
+                    style={{ backgroundColor: "#f0f2f5", color: "#2897fd" }}
+                    type="primary"
+                  >
+                    Adicionar nova turma
+                  </Button>
+                </Link>
               </Col>
             </Row>
             <CardList />

@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import { Skeleton, Card, Avatar, Descriptions } from "antd";
+import React from "react";
+import { Skeleton, Card, Avatar, Descriptions, Modal } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { SiGooglecalendar, SiZoom } from "react-icons/si";
 import { BsClock } from "react-icons/bs";
 import { RiEditLine } from "react-icons/ri";
-import Modal from "./Modal";
+
+import { ModalType } from "../utils/ModalType";
 const { Meta } = Card;
 const CardComponent = () => {
-  const [showModal, setShowModal] = useState(false);
   const onShowModal = () => {
-    setShowModal(true);
-  };
-
-  const handleOk = (e) => {
-    setShowModal(false);
-  };
-
-  const handleCancel = (e) => {
-    setShowModal(false);
+    ModalType(
+      Modal,
+      "info",
+      "Sala Zoom",
+      <Descriptions title="Sala de Aula 4">
+        <Descriptions.Item label="Host">Kelly</Descriptions.Item>
+        <Descriptions.Item label="Conta">Alvaniralucas</Descriptions.Item>
+      </Descriptions>
+    );
   };
   return (
     <>
@@ -47,18 +47,6 @@ const CardComponent = () => {
           />
         </Skeleton>
       </Card>
-      <Modal
-        visible={showModal}
-        handleOk={handleOk}
-        handleCancel={handleCancel}
-        title="Sala Zoom"
-      >
-        {" "}
-        <Descriptions title="Sala de Aula 4">
-          <Descriptions.Item label="Host">Kelly</Descriptions.Item>
-          <Descriptions.Item label="Conta">Alvaniralucas</Descriptions.Item>
-        </Descriptions>
-      </Modal>
     </>
   );
 };
