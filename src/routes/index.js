@@ -1,13 +1,13 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "../pages/Home";
-import AddUser from "../pages/AddUser";
+import AddClass from "../pages/AddClass";
 
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/home" exact component={Home} />
-      <Route path="/addUser" component={AddUser} />
+      <Route path="/" exact component={Home} />
+      <Route path="/addClass" component={AddClass} />
     </Switch>
   );
 };
